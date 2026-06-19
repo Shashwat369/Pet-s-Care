@@ -1,14 +1,14 @@
 import React from 'react'
-import landingPage from './pages/landingPage'
+import {createBrowserRouter} from 'react-router-dom'
+import LandingPage from './pages/LandingPage'
 
-const App = () => {
-  return (
-    <>
-    
-    
-    
-    </>
-  )
-}
 
-export default App
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LandingPage/>
+  }
+
+])
+
+export default router
