@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const navTags = [
@@ -14,7 +15,9 @@ const Navbar = () => {
         <h1 className='nav-heading'>Logo</h1>
         <ul className= 'nav-lists'>
             {navTags.map((item, index)=>{
-                return <li key={index}>{item.name}</li>
+                return <li key={item.name}>
+                    <Link to={item.path}>{item.name}</Link>
+                </li>
             })}
 
         </ul>
